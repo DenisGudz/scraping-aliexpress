@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reelLife outfitters</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="banner">
+        <div class="name">reelLife outfitters</div>
+        <div class="slogan">Hooking Your Passion for the Outdoors</div>
+        <a href="#asdf">
+            <button class="get-started">Get Started!</button>
+        </a>
+    </div>
+
+    <div class="best-sellers" id="asdf">
+            <h1 id="best-sellers-header">Best Sellers</h1>
+            <div id="products">
+                
+                {%for product in all%}
+                    <div class="product product{{product[0]}}">
+                
+                        <img src="/static/imgs/{{product[3]}}" class="product-img" alt="">
+                        <div class="info">
+                            <h3 class="info-header">{{product[1]}}</h3>
+                            <p class="info-price">
+                                {{product[2]}}
+                            </p>
+                            <a href="/buy/{{product[0]}}">
+                                <button class="buy" >BUY</button>
+                            </a>
+                        </div>   
+                    </div>
+                {%endfor%}
+
+            </div>
+            
+    </div>
+
+</body>
+</html>

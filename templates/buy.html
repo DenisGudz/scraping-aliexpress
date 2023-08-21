@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reelLife outfitters</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="best-sellers">
+    <h2 id="buy-header">{{product[1]}}</h2>
+
+            
+                <div class="buy-body">
+            
+                    <img src="/static/imgs/{{product[3]}}" class="product-img product-img-buy" alt="">
+                    <div class="info">
+                        <h4 class="buy-price info-price">
+                            {{product[2]}}
+                        </h4>
+                        <input type="text" class="address buy-input" placeholder="address">
+                        <input type="text" class="credit-card-number buy-input" placeholder="credit card">
+                        <input type="text" class="exp-date buy-input" placeholder="exp date">
+                        <input type="text" class="secret-pin buy-input" placeholder="secret pin">
+
+
+                        <a href="/buy/{{product[0]}}">
+                            <button class="checkout" >check out</button>
+                        </a>
+                    </div>   
+                </div>
+            
+    </div>
+
+</body>
+</html>
